@@ -1,0 +1,176 @@
+/* Gobal Variables */
+:root {
+    --robinEggBlue: rgb(0,204,204);
+    --customCherry: rgb(210,4,45);
+}
+
+/* Overall */
+body {
+    background-color: var(--robinEggBlue);
+}
+
+article {
+    margin: 50px;
+    border: 2px solid rgb(75, 75, 75);
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(155, 154, 154);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+nav, footer {
+    background-color: #1d2d45 !important;
+}
+
+/* Navigation */
+.nav-item:hover {
+    color: rgb(255,255,255) !important;
+}
+
+/* Home Content */
+#all-books-article,
+#all-authors-article {
+    width: 45%;
+    margin: 10px;
+}
+
+#all-books,
+#all-authors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Book Content */
+#all-book-content,
+#book-list-content {
+    flex-direction: row;
+}
+
+/* Forms */
+#login-user-form {
+    width: 50%;
+}
+
+#login-user-form,
+#create-book-form,
+#update-book-form,
+#delete-book-form,
+#create-author-form,
+#update-author-form,
+#delete-author-form,
+#create-user-form,
+#update-user-form,
+#delete-user-form {
+    background-color: rgb(64,132,88, .9);
+}
+
+#login-user-form label,
+#create-book-form label,
+#update-book-form label,
+#delete-book-form label,
+#create-author-form label,
+#update-author-form label,
+#delete-author-form label,
+#create-user-form label,
+#update-user-form label,
+#delete-user-form label {
+    color: rgb(255,255,255);
+}
+
+/* Form Inputs */
+#login-user-form input {
+    border: none;
+    border-bottom: 2px solid rgb(255,255,255);
+    background-color: transparent;
+}
+
+input::placeholder {
+    color:transparent;
+}
+
+/* ##Pseudo-classes */
+.first-name-label::before,
+.last-name-label::before,
+.email-label::before,
+.username-label::before,
+.password-label::before,
+.access-rights-label::before {
+    content: '** ';
+    color: var(--customCherry);
+}
+
+/* Buttons */
+#login-btn {
+    width: 100px !important;
+}
+
+#create-book-btn,
+#update-book-btn,
+#delete-book-btn,
+#create-author-btn,
+#update-author-btn,
+#delete-author-btn,
+#create-user-btn,
+#update-user-btn {
+    width: 200px !important;
+}
+
+/* Screen size below 575px Display */
+@media only screen and (max-width: 575px) {
+    /* Login */
+    #login-container,
+    #login-user-form {
+        width: 100%;
+        padding: 0;
+    }
+    
+    /* Home Content */
+    #all-books-article,
+    #all-authors-article,
+    #all-user-article {
+        width: 100%;
+        margin: 10px;
+    }
+
+    /* Books */
+    #book-list-article,
+    #author-list-article,
+    #user-list-article {
+        margin: 20px 10px;
+    }
+
+    #all-book-content,
+    #book-list-content {
+        flex-direction: column-reverse;
+    }
+
+    #all-book-content img,
+    #book-list-content img {
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+    }
+
+    /* Form Labels */
+    .first-name-label,
+    .last-name-label,
+    .email-label,
+    .username-label,
+    .password-label,
+    #login-user-form label,
+    #create-book-form label,
+    #create-author-form label {
+        display: none;
+    }
+
+    /* Form Inputs */
+    input::placeholder {
+        color: lightgrey;
+    }
+}
